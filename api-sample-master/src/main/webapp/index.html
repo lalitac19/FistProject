@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+	<head> 
+		<script>
+		function getallaccounts(url) {
+			var request = new XMLHttpRequest();
+			request.open('GET', url, false);
+			request.send();
+			document.getElementById("cocktail").innerHTML = request.response;
+		}
+
+
+		</script>
+	</head> 
+
+
+	<body>
+
+		<h1 id = "heading" align="center"><u>Cocktail Life</u></h1>
+<br>
+<p id = "cocktail" align="center">This will change to a cocktail</p>
+
+<br> 
+		<p align="center">Please enter the following details to register:</p>
+
+
+		<form>
+			<div id="registration" align="center" > 
+
+<button type="submit" onclick="getallaccounts('http://localhost:8080/accountapp/api/account/getAllAccounts')">Display all Results</button>
+<button type="submit" onclick="registered()">Add user </button>
+
+</div>
+</form>
+</body>
+
+
+</html>
